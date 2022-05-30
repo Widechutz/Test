@@ -169,7 +169,7 @@ local player = game.Players.LocalPlayer
 player.CameraMaxZoomDistance = 9999999999999
 player.CameraMinZoomDistance = 0 
 end)
-Gamer:Button("Freecam not ready jet", function()
+Gamer:Button("Freecam", function()
     -- To exit and enter free camera, use key shortcut Left Shift + P
 
 local player = game:GetService("Players")
