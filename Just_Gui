@@ -1,3 +1,14 @@
+local player = game:GetService("Players")
+while not player.LocalPlayer do player.Changed:wait() end
+player = player.LocalPlayer
+local camera = workspace.CurrentCamera
+
+local RS  = game:GetService("RunService")
+local UIS = game:GetService("UserInputService")
+local StarterGui = game:GetService("StarterGui")
+
+local Spring = require(script:WaitForChild("Spring"))
+local Maid = require(script:WaitForChild("Maid"))
 local Workspace = game:GetService("Workspace")
 local CoreGui = game:GetService("CoreGui")
 local Players = game:GetService("Players")
@@ -541,7 +552,7 @@ Gamer:Button("Walkspeed Over 9000", function()
 end)
 Gamer:Button("Help", function()
 local msg = Instance.new("Message", player.PlayerGui)
-msg.Text = "Script made by Wide. If you press Fly you will enable the fly button (K). Inf Jump will enable the inf jump button (L). The Tools give you some asome Tools.If you Press Freecam you can enable ore disable Freecam with (Left Shift + P). Press (T) to close this Mesage". No Responsebility for any banns.
+msg.Text = "Script made by Wide. If you press Fly you will enable the fly button (K). Inf Jump will enable the inf jump button (L). The Tools give you some asome Tools.If you Press Freecam you can enable ore disable Freecam with (Left Shift + P). Press (T) to close this Mesage. No Responsebility for any banns."
 
 mouse.KeyDown:Connect(function(key)
     if key == "t" then
