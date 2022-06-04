@@ -886,7 +886,7 @@ Gamer:Button("Walkspeed Over 9000", function()
 end)
 Gamer:Button("Help", function()
 local msg = Instance.new("Message", player.PlayerGui)
-msg.Text = "Script made by Wide. If you press Fly you will enable the fly button (K).If you press No Clip you can enter No Clip (N). If you press Hide Mouse you can hide the mous with (J). Inf Jump will enable the inf jump button (L). The Tools give you some asome Tools.\n If you press Click tp Keybind vou can enable click tp with (U). If you Press Freecam you can enable ore disable Freecam with (Left Shift + P). Press (B) to close this Mesage. No Responsebility for any banns."
+msg.Text = "Script made by Wide. If you press Fly you will enable the fly button (K).If you press No Clip you can enter No Clip (N). If you press Hide Mouse you can hide the mous with (G). Inf Jump will enable the inf jump button (L). The Tools give you some asome Tools.\n If you press Click tp Keybind vou can enable click tp with (X). If you Press Freecam you can enable ore disable Freecam with (Left Shift + P). Press (B) to close this Mesage. No Responsebility for any banns. Have Funn :)"
 
 mouse.KeyDown:Connect(function(key)
     if key == "b" then
