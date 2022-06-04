@@ -153,7 +153,7 @@ tool.Parent = game.Players.LocalPlayer.Backpack
 end)
 Gamer:Button("Click Tp Key", function()
 mouse.KeyDown:connect(function(key)
-    if key:lower() == "u" then
+    if key:lower() == "x" then
 	if OneTime3 == false then
 	OneTime3 = true
         if ClickTpKey == true then
@@ -165,7 +165,7 @@ elseif ClickTpKey == false then
     end
 end)
 mouse.KeyDown:connect(function(key)
-    if key:upper() == "U" then
+    if key:upper() == "X" then
         if OneTime3 == true then
 	OneTime3 = false
 end
@@ -314,7 +314,7 @@ Gamer:Button("Shiftlock Off", function()
 end)
 Gamer:Button("Hide Mous", function()
 mouse.KeyDown:connect(function(key)
-    if key:lower() == "j" then
+    if key:lower() == "g" then
 	if OneTime == false then
 	OneTime = true
         if InvMous == true then
@@ -328,7 +328,7 @@ elseif InvMous == false then
     end
 end)
 mouse.KeyDown:connect(function(key)
-    if key:upper() == "J" then
+    if key:upper() == "G" then
         if OneTime == true then
 	OneTime = false
 end
