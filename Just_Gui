@@ -13,10 +13,15 @@ local Clipon = false
 local userInputService = game:GetService("UserInputService")
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
+local player = game:GetService("Players").LocalPlayer
+local char = player.Character
+local uis = game:GetService("UserInputService")
 local OneTime = false
 local InvMous = true
 local NoClip01 = true
 local OneTime2 = false
+local ClickTpKey = false
+local OneTime3 = false
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/GAGA5H8t"))();
 
 
@@ -145,6 +150,33 @@ pos = CFrame.new(pos.X,pos.Y,pos.Z)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
+end)
+Gamer:Button("Click Tp Key", function()
+mouse.KeyDown:connect(function(key)
+    if key:lower() == "u" then
+	if OneTime3 == false then
+	OneTime3 = true
+        if ClickTpKey == true then
+    	ClickTpKey = false
+elseif ClickTpKey == false then
+        ClickTpKey = true
+    end
+	end
+    end
+end)
+mouse.KeyDown:connect(function(key)
+    if key:upper() == "U" then
+        if OneTime3 == true then
+	OneTime3 = false
+end
+    end
+end)
+
+  mouse.Button1Down:Connect(function()
+    if ClickTpKey == true then
+        char:MoveTo(mouse.Hit.p)
+    end
+end)
 end)
 Gamer:Button("Tools", function()
     a = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
@@ -854,7 +886,7 @@ Gamer:Button("Walkspeed Over 9000", function()
 end)
 Gamer:Button("Help", function()
 local msg = Instance.new("Message", player.PlayerGui)
-msg.Text = "Script made by Wide. If you press Fly you will enable the fly button (K).If you press No Clip you can enter No Clip (N). If you press Hide Mouse you can hide the mous with (J). Inf Jump will enable the inf jump button (L). The Tools give you some asome Tools.\n If you Press Freecam you can enable ore disable Freecam with (Left Shift + P). Press (B) to close this Mesage. No Responsebility for any banns."
+msg.Text = "Script made by Wide. If you press Fly you will enable the fly button (K).If you press No Clip you can enter No Clip (N). If you press Hide Mouse you can hide the mous with (J). Inf Jump will enable the inf jump button (L). The Tools give you some asome Tools.\n If you press Click tp Keybind vou can enable click tp with (U). If you Press Freecam you can enable ore disable Freecam with (Left Shift + P). Press (B) to close this Mesage. No Responsebility for any banns."
 
 mouse.KeyDown:Connect(function(key)
     if key == "b" then
